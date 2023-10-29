@@ -1,0 +1,228 @@
+/* Font */
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    background: linear-gradient(rgba(13, 141, 181, 0.6), rgba(155, 89, 182, 0.6));
+}
+
+body {
+    font-family: Montserrat, Arial, Verdana;
+}
+
+/* Form styles */
+#form {
+    width: 50%;
+    margin: 50px auto;
+    text-align: center;
+    position: relative;
+    border-radius: 10px;
+}
+
+#form fieldset {
+    height: 400px;
+    background: white;
+    border: 0 none;
+    border-radius: 3px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    padding: 40px 30px;
+    box-sizing: border-box;
+    width: 80%;
+    margin: 0 10%;
+}
+
+/* Inputs */
+#form input, #form textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: Montserrat;
+    color: #2C3E50;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+/* Buttons */
+#form .action-button {
+    width: 100px;
+    background: #589BEC;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 1px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 40px 10px 40px 0;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+#form .action-button:hover,
+#form .action-button:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #589BEC;
+}
+
+/* Headings */
+.fs-title {
+    font-size: 20px;
+    color: #2C3E50;
+    margin-bottom: 20px;
+}
+
+.fs-subtitle {
+    font-weight: normal;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Progressbar */
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    /* CSS counters to number the steps */
+    counter-reset: step;
+}
+
+#progressbar li {
+    list-style-type: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 9px;
+    width: 33.33%;
+    float: left;
+    position: relative;
+}
+
+#progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 20px;
+    line-height: 20px;
+    display: block;
+    font-size: 10px;
+    color: #333;
+    background: white;
+    border-radius: 3px;
+    margin: 0 auto 5px auto;
+}
+
+/* Progressbar connectors */
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: -50%;
+    top: 9px;
+    z-index: -1; /* Put it behind the numbers */
+}
+
+#progressbar li:first-child:after {
+    /* Connector not needed before the first step */
+    content: none;
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: #589BEC;
+    color: white;
+}
+
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+}
+
+.next-button {
+    display: none;
+}
+
+.form-step.active .next-button {
+    display: block;
+}
+
+.form-step:last-child .next-button {
+    display: none;
+}
+
+/* Style for the fieldset */
+.form-step legend {
+    font-size: 18px;
+    color: #2C3E50;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 5px 10px;
+    background-color: #fff;
+}
+
+/* Style for the label */
+.form-step label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+}
+
+/* Style for the select input */
+.form-step select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: Montserrat;
+    color: #2C3E50;
+    font-size: 13px;
+}
+
+/* Style for the "Previous" and "Submit" buttons */
+#form .previous-button,
+#form .next-button, #form .submit-button {
+    width: 100px;
+    background: #589BEC;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 1px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 40px 10px 40px 0; /* Adjust the right margin to create space between buttons */
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-block; /* Display the buttons inline */
+}
+
+.form-step .previous-button:hover,
+.form-step .next-button:hover,
+.form-step .previous-button:focus,
+.form-step .next-button:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+
+/* Style for the date picker input */
+#date {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: Montserrat;
+    color: #2C3E50;
+    font-size: 13px;
+}
