@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+    <!-- Styles import -->
     <link rel="stylesheet" type="text/css" href="assets/styles/styles.css">
     <title>Booking Page</title>
 </head>
 <body>
+    <!-- Main Form -->
     <form id="form">
+        <!-- Progress Bar -->
         <ul id="progress">
             <li class="active">Booking Details</li>
             <li>Pick Your Course</li>
             <li>Pick a Date</li>
         </ul>
-
+        <!-- First fieldset  -->
         <fieldset class="form-step active">
             <h2 class="title">Book Your Course</h2>
             <h3 class="subtitle">Enter Your Details</h3>
@@ -23,7 +27,7 @@
             <input type="text" name="email" placeholder="Email" />
             <button class="next-button next action-button">Next</button>
         </fieldset>
-
+        <!-- Second fieldset -->
         <fieldset class="form-step">
             <h2  class="title">Pick Your Course</h2>
             <label for="course">Course:</label>
@@ -35,10 +39,10 @@
                 <option value="course5">Course 5</option>
                 <option value="course6">Course 6</option>
             </select>
-            <button class="previous-button next action-button">Previous</button>
-            <button class="next-button next action-button">Next</button>
+            <button class="previous-button">Previous</button>
+            <button class="next-button">Next</button>
         </fieldset>
-
+        <!-- Third fieldset -->
         <fieldset class="form-step">
             <h2 class="title">Pick a Date</h2>
             <h3 class="subtitle">When are you available to start?</h3>
@@ -47,32 +51,6 @@
             <button class="submit-button next">Submit</button>
         </fieldset>
     </form>
-
-    <script>
-        const nextButtons = document.querySelectorAll('.next-button');
-        const previousButtons = document.querySelectorAll('.previous-button');
-        const formSteps = document.querySelectorAll('.form-step');
-        const progressItems = document.querySelectorAll('#progress li');
-
-        nextButtons.forEach((button, index) => {
-            button.addEventListener('click', (e) => {
-                e.preventDefault();
-                formSteps[index].classList.remove('active');
-                formSteps[index + 1].classList.add('active');
-                progressItems[index].classList.remove('active');
-                progressItems[index + 1].classList.add('active');
-            });
-        });
-
-        previousButtons.forEach((button, index) => {
-            button.addEventListener('click', (e) => {
-                e.preventDefault();
-                formSteps[index].classList.remove('active');
-                formSteps[index - 1].classList.add('active');
-                progressItems[index].classList.remove('active');
-                progressItems[index - 1].classList.add('active');
-            });
-        });
-    </script>
+    <script src="assets/scripts/script.js"></script>
 </body>
 </html>
