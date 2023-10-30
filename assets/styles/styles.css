@@ -1,5 +1,4 @@
-/* Font */
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
 
 /* Basic reset */
 * {
@@ -18,6 +17,7 @@ body {
 
 /* Form styles */
 #form {
+    font-family: "Lora", Montserrat, Arial, Verdana;
     width: 50%;
     margin: 50px auto;
     text-align: center;
@@ -45,7 +45,7 @@ body {
     margin-bottom: 20px;
     width: 100%;
     box-sizing: border-box;
-    font-family: Montserrat;
+    font-family: "Lora", Montserrat, Arial, Verdana;
     color: #2C3E50;
     font-size: 13px;
     margin-top: 10px;
@@ -72,28 +72,28 @@ body {
 }
 
 /* Headings */
-.fs-title {
+.title {
     font-size: 20px;
     color: #2C3E50;
     margin-bottom: 20px;
 }
 
-.fs-subtitle {
+.subtitle {
     font-weight: normal;
     font-size: 13px;
     color: #666;
     margin-bottom: 20px;
 }
 
-/* Progressbar */
-#progressbar {
+/* Progress bar */
+#progress {
     margin-bottom: 30px;
     overflow: hidden;
     /* CSS counters to number the steps */
     counter-reset: step;
 }
 
-#progressbar li {
+#progress li {
     list-style-type: none;
     color: white;
     text-transform: uppercase;
@@ -103,7 +103,7 @@ body {
     position: relative;
 }
 
-#progressbar li:before {
+#progress li:before {
     content: counter(step);
     counter-increment: step;
     width: 20px;
@@ -116,8 +116,8 @@ body {
     margin: 0 auto 5px auto;
 }
 
-/* Progressbar connectors */
-#progressbar li:after {
+/* Progress bar connectors */
+#progress li:after {
     content: '';
     width: 100%;
     height: 2px;
@@ -128,16 +128,17 @@ body {
     z-index: -1; /* Put it behind the numbers */
 }
 
-#progressbar li:first-child:after {
+#progress li:first-child:after {
     /* Connector not needed before the first step */
     content: none;
 }
 
-#progressbar li.active:before,
-#progressbar li.active:after {
+#progress li.active:before,
+#progress li.active:after {
     background: #589BEC;
     color: white;
 }
+
 
 .form-step {
     display: none;
@@ -185,7 +186,7 @@ body {
     margin-bottom: 10px;
     width: 100%;
     box-sizing: border-box;
-    font-family: Montserrat;
+    font-family: "Lora", Montserrat, Arial, Verdana;
     color: #2C3E50;
     font-size: 13px;
 }
@@ -222,7 +223,7 @@ body {
     margin-bottom: 10px;
     width: 100%;
     box-sizing: border-box;
-    font-family: Montserrat;
+    font-family: "Lora", Montserrat, Arial, Verdana;
     color: #2C3E50;
     font-size: 13px;
 }

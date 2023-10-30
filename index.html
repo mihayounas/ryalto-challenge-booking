@@ -3,27 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/assets/styles/styles.css">
     <title>Booking Page</title>
 </head>
 <body>
     <form id="form">
-        <ul id="progressbar">
+        <ul id="progress">
             <li class="active">Booking Details</li>
             <li>Pick Your Course</li>
             <li>Pick a Date</li>
         </ul>
 
         <fieldset class="form-step active">
-            <h2 class="fs-title">Book Your Course</h2>
-            <h3 class="fs-subtitle">Enter Your Details</h3>
+            <h2 class="title">Book Your Course</h2>
+            <h3 class="subtitle">Enter Your Details</h3>
             <input type="text" name="name" placeholder="Full Name" />
             <input type="text" name="email" placeholder="Email" />
             <button class="next-button next action-button">Next</button>
         </fieldset>
 
         <fieldset class="form-step">
-            <legend>Pick Your Course</legend>
+            <h2  class="title">Pick Your Course</h2>
             <label for="course">Course:</label>
             <select id="course" name="course">
                 <option value="course1">Course 1</option>
@@ -38,25 +40,27 @@
         </fieldset>
 
         <fieldset class="form-step">
-            <h2 class="fs-title">Pick a Date</h2>
-            <h3 class="fs-subtitle">When are you available to start?</h3>
+            <h2 class="title">Pick a Date</h2>
+            <h3 class="subtitle">When are you available to start?</h3>
             <input type="date" name="date" id="date" class="date-picker" />
             <button class="previous-button next action-button">Previous</button>
             <button class="submit-button next">Submit</button>
         </fieldset>
-        
     </form>
 
     <script>
         const nextButtons = document.querySelectorAll('.next-button');
         const previousButtons = document.querySelectorAll('.previous-button');
         const formSteps = document.querySelectorAll('.form-step');
+        const progressItems = document.querySelectorAll('#progress li');
 
         nextButtons.forEach((button, index) => {
             button.addEventListener('click', (e) => {
                 e.preventDefault();
                 formSteps[index].classList.remove('active');
                 formSteps[index + 1].classList.add('active');
+                progressItems[index].classList.remove('active');
+                progressItems[index + 1].classList.add('active');
             });
         });
 
@@ -65,6 +69,8 @@
                 e.preventDefault();
                 formSteps[index].classList.remove('active');
                 formSteps[index - 1].classList.add('active');
+                progressItems[index].classList.remove('active');
+                progressItems[index - 1].classList.add('active');
             });
         });
     </script>
