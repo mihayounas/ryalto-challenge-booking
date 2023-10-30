@@ -2,6 +2,11 @@
 
 <a href="https://mihayounas.github.io/ryalto-challenge-booking/" target="_blank" rel="noopener">Booking Your Course Form</a>(press for Live DEMO) is a website designed as a multi-step booking form.
 
+![Devices](assets/images/devices.png)
+
+# Flowchart
+![Flowchart](assets/images/flowchart.png)
+
 ## Design
 * ### Font 
 The fonts chosen were 'Lora' and 'Monteserrat'  The two fonts chosen go really good together and it provides really good contrast .
@@ -17,12 +22,12 @@ Booking Form website is set up to be easy to use . It contains features that a u
 ![Main Image](assets/images/course.png)
 
 Pick a course fieldset is a dropdown of a list of courses.
-![Main Image](assets/images/pick-course.png)
+![Pick course](assets/images/pick-course.png)
 
 Pick a date fieldset is a datepicker. 
-![Main Image](assets/images/pick-date.png)
+![pick date](assets/images/pick-date.png)
 
-![Main Image](assets/images/pickdate2.png)
+![pick date 2](assets/images/pickdate2.png)
 
 
 # Technologies Used
@@ -43,8 +48,9 @@ Booking Form site was tested on the following browsers with no visible issues fo
 ### Content
 
 * The font came from [Google Fonts](https://fonts.google.com/).
-* The colour scheme was made by [Colormind](https://coolors.co/).
+* The colour scheme was made by [Coolors](https://coolors.co/).
 * Moqup was done on [Moqups](https://app.moqups.com/).
+* Flowchart schetch [Lucidchart](https://lucid.app/)
 
 
 Mihaela Younas 2023.

@@ -38,7 +38,7 @@ body {
 }
 
 /* Inputs */
-#form input, #form textarea {
+#form input {
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 3px;
@@ -89,7 +89,6 @@ body {
 #progress {
     margin-bottom: 30px;
     overflow: hidden;
-    /* CSS counters to number the steps */
     counter-reset: step;
 }
 
@@ -125,11 +124,10 @@ body {
     position: absolute;
     left: -50%;
     top: 9px;
-    z-index: -1; /* Put it behind the numbers */
+    z-index: -1;
 }
 
 #progress li:first-child:after {
-    /* Connector not needed before the first step */
     content: none;
 }
 
@@ -159,18 +157,6 @@ body {
 .form-step:last-child .next-button {
     display: none;
 }
-
-/* Style for the fieldset */
-.form-step legend {
-    font-size: 18px;
-    color: #2C3E50;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    padding: 5px 10px;
-    background-color: #fff;
-}
-
 /* Style for the label */
 .form-step label {
     font-weight: bold;
