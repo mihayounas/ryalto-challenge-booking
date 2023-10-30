@@ -51,6 +51,7 @@ Booking Form site was tested on the following browsers with no visible issues fo
 * The colour scheme was made by [Coolors](https://coolors.co/).
 * Moqup was done on [Moqups](https://app.moqups.com/).
 * Flowchart schetch [Lucidchart](https://lucid.app/)
+* Design in [Canva](https://www.canva.com/)
 
 
 Mihaela Younas 2023.
